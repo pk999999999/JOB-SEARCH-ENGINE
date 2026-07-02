@@ -1,0 +1,90 @@
+# Senior AI Engineer — Job Description Requirements
+# Used by the ranking pipeline to score candidates
+
+job_title: "Senior AI Engineer"
+
+description: >
+  We are looking for a Senior AI Engineer to design, build, and deploy
+  production-grade machine learning systems. The ideal candidate has deep
+  expertise in NLP, retrieval systems, and ranking algorithms, with hands-on
+  experience shipping ML pipelines at scale.
+
+required_skills:
+  - python
+  - machine learning
+  - deep learning
+  - natural language processing
+  - transformers
+  - pytorch
+  - tensorflow
+  - data pipelines
+  - mlops
+  - model deployment
+
+preferred_skills:
+  - retrieval systems
+  - ranking algorithms
+  - recommendation systems
+  - llm
+  - large language models
+  - vector databases
+  - embeddings
+  - sentence transformers
+  - kubernetes
+  - docker
+  - aws
+  - gcp
+  - azure
+  - sql
+  - spark
+  - airflow
+  - ray
+  - fastapi
+  - ci/cd
+  - a/b testing
+
+experience:
+  ideal_min_years: 5
+  ideal_max_years: 9
+  absolute_min_years: 3
+  absolute_max_years: 15
+
+location:
+  preferred:
+    - "Pune"
+    - "Noida"
+  good:
+    - "Mumbai"
+    - "Hyderabad"
+    - "Delhi NCR"
+    - "Delhi"
+    - "New Delhi"
+    - "Gurgaon"
+    - "Gurugram"
+  acceptable_country: "India"
+
+education:
+  preferred_degrees:
+    - "PhD"
+    - "M.Tech"
+    - "M.S."
+    - "Masters"
+  preferred_fields:
+    - "Computer Science"
+    - "Artificial Intelligence"
+    - "Machine Learning"
+    - "Data Science"
+    - "Statistics"
+    - "Mathematics"
+    - "Electrical Engineering"
+  acceptable_degrees:
+    - "B.Tech"
+    - "B.E."
+    - "Bachelors"
+    - "B.S."
+
+behavioral_thresholds:
+  min_recruiter_response_rate: 0.3
+  max_avg_response_time_hours: 72
+  min_interview_completion_rate: 0.5
+  recent_activity_days: 90

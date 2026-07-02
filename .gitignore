@@ -1,0 +1,59 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+
+# Frontend
+node_modules/
+.next/
+frontend/out/
+frontend/.next/
+frontend/node_modules/
+
+# IDE
+.vscode/
+.idea/
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.coverage
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+
+# Frontend
+node_modules/
+.next/
+frontend/out/
+frontend/.next/
+frontend/node_modules/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.db
+
+data/chroma/
+data/uploads/
+artifacts/
