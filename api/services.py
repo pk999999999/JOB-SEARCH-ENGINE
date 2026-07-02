@@ -191,23 +191,23 @@ class CandidateService:
         candidate = _parse_candidate_row(cand_data)
         
         # 3. Generate embeddings on the fly
-        # Lazy load model to save memory/startup time if unused
-        if not hasattr(self, "_embed_model"):
-            from sentence_transformers import SentenceTransformer
-            logger.info("Loading embedding model for ingestion...")
-            self._embed_model = SentenceTransformer(settings.embedding_model)
-            
+        # Re-use the global singleton embedder to avoid loading a second
+        # copy of the model into memory (would OOM on Render free tier).
+        from src.embedder import get_embedder
+        embedder = get_embedder(settings.embedding_model)
+        logger.info("Using shared embedder for ingestion: %s", type(embedder).__name__)
+
         narrative_text = candidate.get_narrative_text()
         skill_text = candidate.get_skills_text()
-        
+
         narrative_text = narrative_text if narrative_text.strip() else "no information available"
         skill_text = skill_text if skill_text.strip() else "no skills listed"
-        
-        narrative_emb = self._embed_model.encode(
+
+        narrative_emb = embedder.encode(
             [narrative_text], convert_to_numpy=True, normalize_embeddings=True
         ).astype(np.float32)
-        
-        skill_emb = self._embed_model.encode(
+
+        skill_emb = embedder.encode(
             [skill_text], convert_to_numpy=True, normalize_embeddings=True
         ).astype(np.float32)
         
