@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: redrob-ranker
+    runtime: docker
+    plan: free
+    region: oregon
+    envVars:
+      - key: LOG_LEVEL
+        value: INFO
+      - key: CORS_ORIGINS
+        value: "*"
+      - key: WEB_CONCURRENCY
+        value: 1
